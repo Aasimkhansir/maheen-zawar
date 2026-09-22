@@ -1,1 +1,204 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations Maheen Zawar! 🎉</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      overflow: hidden;
+      color: white;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 650px;
+      padding: 45px 30px;
+      text-align: center;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      animation: show 1s ease;
+    }
+
+    .trophy {
+      font-size: 80px;
+      animation: bounce 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 15px 0;
+      color: #ffd700;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .score {
+      font-size: 60px;
+      font-weight: bold;
+      color: #00ffcc;
+      margin: 20px 0;
+    }
+
+    .percentage {
+      font-size: 24px;
+      color: #ffe66d;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      background: #ffd700;
+      color: #222;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: white;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -20px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="trophy">🏆</div>
+
+    <h1>Congratulations! 🎉</h1>
+
+    <h2>Dear Maheen Zawar ❤️</h2>
+
+    <div class="score">
+      543 / 600
+    </div>
+
+    <div class="percentage">
+      🌟 90.5% — Outstanding Achievement! 🌟
+    </div>
+
+    <p>
+      Maheen, your hard work, dedication, and determination
+      have truly paid off! 💫
+      <br><br>
+
+      You have achieved an amazing result that you should
+      be incredibly proud of. Keep believing in yourself
+      and keep reaching for the stars! 🚀
+      <br><br>
+
+      <strong>
+        Congratulations, Maheen Zawar! 🎊❤️
+      </strong>
+    </p>
+
+    <button onclick="celebrate()">
+      Celebrate! 🎉
+    </button>
+
+  </div>
+
+  <script>
+    function celebrate() {
+      alert("🎉 Congratulations Maheen Zawar! 🎉\n\n543 / 600 — 90.5% 🏆");
+    }
+
+    const colors = [
+      "#ff4757",
+      "#ffd700",
+      "#00ffcc",
+      "#ffffff",
+      "#7bed9f",
+      "#70a1ff"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+
+      const confetti = document.createElement("div");
+
+      confetti.classList.add("confetti");
+
+      confetti.style.left = Math.random() * 100 + "vw";
+
+      confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      confetti.style.animationDuration =
+        (Math.random() * 3 + 2) + "s";
+
+      confetti.style.animationDelay =
+        Math.random() * 5 + "s";
+
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+</body>
+</html>
